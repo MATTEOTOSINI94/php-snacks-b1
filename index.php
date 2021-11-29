@@ -77,26 +77,30 @@ $posts = [
 
 $chiaviArray = array_keys($posts);
 var_dump($chiaviArray);
-
+// METODO CON IL FOR
 for ($i=0; $i < count($chiaviArray) ; $i++) { 
-  $data = $chiaviArray[$i];
+  echo $data = $chiaviArray[$i];
   $postDelGiorno = $posts[$data];
-
-  
-
-
   for ($x=0; $x < count($postDelGiorno) ; $x++) { 
     $arrayDati = $postDelGiorno[$x]["title"]. "<br>" . $postDelGiorno[$x]["author"]."<br>". $postDelGiorno[$x]["text"];
-    
-    echo "<p>$arrayDati</p>";
+    echo "<ul><li>$arrayDati</li></ul>";
   }
+};
+// METODO CON IL FOR EACH
+foreach ($posts as $key => $value) {
+   echo $key;
+
+   foreach ($value as  $valu) {
+    //    var_dump($valu);
+
+      $allPost = $valu["title"] ."<br>".$valu["author"]."<br>".$valu["text"];
+
+      echo "<ul><li>$allPost</li></ul>";
+      
+      
+   }
 
   
-;
-
-  
-  
-
 }
 
 
@@ -123,8 +127,13 @@ echo implode(" ",$arrayNumber);
 
 
 
-?>
 
+
+
+
+
+
+?>
 
 
 
