@@ -77,7 +77,7 @@ $posts = [
 
 $chiaviArray = array_keys($posts);
 var_dump($chiaviArray);
-// METODO CON IL FOR
+// METODO FOR
 for ($i=0; $i < count($chiaviArray) ; $i++) { 
   echo $data = $chiaviArray[$i];
   $postDelGiorno = $posts[$data];
@@ -86,7 +86,7 @@ for ($i=0; $i < count($chiaviArray) ; $i++) {
     echo "<ul><li>$arrayDati</li></ul>";
   }
 };
-// METODO CON IL FOR EACH
+// METODO FOR EACH
 foreach ($posts as $key => $value) {
    echo $key;
 
